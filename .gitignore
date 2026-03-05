@@ -11,3 +11,4 @@ a.out
 .qodo/
 agents/
 workflows/
+*.dSYM
