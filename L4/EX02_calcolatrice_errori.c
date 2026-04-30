@@ -30,9 +30,15 @@ int main()
         printf("La moltiplicazione è: %.1lf\n", num1 * num2);
         break;
     case 4:
-        printf("La divisione è: %.1lf\n", num1 / num2);
+        if (num2 != 0)
+        {
+            printf("La divisione è: %.1lf\n", num1 / num2);
+        }
+        else
+        {
+            printf("Errore: divisione per zero non è permessa.\n");
+        }
         break;
-
     default:
         printf("Scelta non valida.\n");
         break;
@@ -40,18 +46,3 @@ int main()
 
     return 0;
 }
-
-/*
-Osservate: l’analisi
-dei dati inseriti dall’utente si basa sul costrutto selezione.
-È necessario usare il costrutto iterazione in questo programma?
-
-Risposta:
-No, non è necessario usare un costrutto di iterazione in questo programma.
-Per questo esercizio non serve un ciclo (for, while, do-while), perché:
-- l’utente inserisce i dati una sola volta;
-- il programma esegue una sola operazione;
-- dopo aver mostrato il risultato, il programma termina.
-Per gestire la scelta dell’operazione è sufficiente usare un costrutto di selezione, come switch.
-
-*/
